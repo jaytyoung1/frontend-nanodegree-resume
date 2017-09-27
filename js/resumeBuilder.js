@@ -14,10 +14,24 @@ var funThoughts = awesomeThoughts.replace("AWESOME!", "FUN");
 
 $("#main").append(funThoughts);
 */
-name = "Jay Young";
-role = "Python Developer";
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
+
+var bio = {
+	"name": "Jay Young",
+	"role": "Python Developer",
+	"contact": {
+		"mobile": "610-984-2470",
+		"email": "jaytyoung1@gmail.com",
+		"github": "jaytyoung1",
+		"twitter": "j_yo5",
+		"location": "Pen Argyl, PA"
+	},
+	"welcomeMessage": "",
+	"skills": ["Python programming", "Web scraping", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+	"bioPic": "images/headshot.png"
+}
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
