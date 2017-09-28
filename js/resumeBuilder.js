@@ -77,3 +77,20 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
+    $("#skills").append(formattedSkill);
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+}
